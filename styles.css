@@ -115,11 +115,11 @@ body {
   backdrop-filter: blur(0.3rem);
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 1.5rem 3.1rem rgba(0, 0, 0, 0.5);
-  border-top: 0.08rem solid rgba(255, 255, 255, 0.1);
-  border-left: 0.08rem solid rgba(255, 255, 255, 0.1);
+  border-top: 0.08rem solid rgba(255, 255, 255, 0.2);
+  border-left: 0.08rem solid rgba(255, 255, 255, 0.2);
 }
 
-.display {
+#display {
   width: 100%;
   height: 6.5rem;
   margin: 0, 0.5rem;
@@ -129,17 +129,30 @@ body {
   text-align: right;
   padding-right: 0.5rem;
   background: transparent;
-}
-#actual-value{
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 500;
 }
-#last-value {
-  font-size: 2.5rem;
+/*numbers styles*/
+.container .data-number {
+  height: 4rem;
+  width: calc(100% / 4 - 0.5rem);
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  outline: none;
+  border: none;
+  color: rgb(255, 255, 255);
+  background: transparent;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.data-number:hover {
+  background: rgba(255, 255, 255, 0.473);
+  color: rgba(167, 68, 224, 0.753);
   font-weight: 700;
-
 }
-.container .number{
+/*operators styles*/
+.container .data-operator {
   height: 4rem;
   width: calc(100% / 4 - 0.5rem);
   border-radius: 0.5rem;
@@ -152,12 +165,29 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.number:hover{
-  background: rgb(255, 255, 255, 0.1);
-  ;
-
+.data-operator:hover {
+  background: rgba(167, 68, 224, 0.295);
 }
-.container .operator{
+
+.container .delete {
+  height: 4rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  outline: none;
+  border: none;
+  color: rgb(167, 68, 224);
+  background: transparent;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.delete:hover {
+  background: rgba(167, 68, 224, 0.295);
+  color: rgb(255, 255, 255);
+}
+.container .equal {
   height: 4rem;
   width: calc(100% / 4 - 0.5rem);
   border-radius: 0.5rem;
@@ -170,8 +200,6 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.operator:hover{
-  background: rgb(255, 255, 255, 0.1);
-  ;
-
+.equal:hover {
+  background: rgba(167, 68, 224, 0.295);
 }
